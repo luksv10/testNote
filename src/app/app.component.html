@@ -1,0 +1,8 @@
+<div>
+    <select class="mdb-select md-form md-outline colorful-select dropdown-primary" #langSelect (change)="changeLang(langSelect.value)">
+        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+    </select>
+    <div class="container mt-3">
+        <router-outlet></router-outlet>
+    </div>
+</div>

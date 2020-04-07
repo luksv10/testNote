@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 offset-sm-2">
+            <form>
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input [(ngModel)]="note.id" type="text" name="id" class="form-control" id="id">
+                    <label for="title">Title</label>
+                    <input [(ngModel)]="note.title" type="text" name="title" class="form-control" id="title">
+                </div>
+            </form>
+            <div class="button-box col-lg-12">
+                <button class="btn btn-primary mr-1" (click)="save(note)">Create note</button>
+                <button class="btn btn-danger" (click)="delete()">Delete note</button>
+            </div>
+        </div>
+    </div>
+</div>

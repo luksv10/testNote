@@ -1,0 +1,24 @@
+<h1>List of notes</h1>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let note of notes">
+
+            <td>{{ note.id }}</td>
+            <td> {{ note.title }}</td>
+            <td>
+                <button class="btn btn-info" (click)="editNote(note)"> Edit details</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="button-box">
+        <button class="btn btn-primary" (click)="addNewNote()">Create new</button>
+    </div>
+</div>
